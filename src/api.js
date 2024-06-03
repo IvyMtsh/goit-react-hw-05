@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const AccessToken = "";
+const AccessToken = "efd5fa8d762a80a356969910c5bde464";
 
 export const getTrendMovies = async () => {
   const url = `https://api.themoviedb.org/3/trending/movie/day?language=en-US`;

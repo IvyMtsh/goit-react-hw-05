@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { getTrendMovies } from "../../api";
 import css from "./HomePage.module.css";
 import MoviesList from "../../components/MoviesList/MoviesList";
-
 export default function HomePage() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -25,8 +24,9 @@ export default function HomePage() {
 
   return (
     <div>
-      <h1 className={css.tittle}>Trending today</h1>
-      {loading && <b>Loading movies</b>}
+      <h1 className={css.tittle}>Популярні сьогодні</h1>
+      {loading && <b>Завантаження фільмів</b>}
+      {error && <b>Помилка завантаження фільмів</b>}
       {movies.length > 0 && <MoviesList movies={movies} />}
     </div>
   );
